@@ -1,21 +1,38 @@
-# Módulo de Rastreamento de Pedidos via WhatsApp - Appmax
+# Projeto: Sistema de Rastreio Automatizado via WhatsApp - Appmax
 
-Este repositório contém o projeto da "Nova Solução" de rastreamento de pedidos via WhatsApp para e-commerces. O objetivo é integrar essa funcionalidade ao ecossistema de pagamentos completo que a Appmax oferece.
+## 1. Descrição Geral
 
-## A Solução Propost
+O objetivo deste projeto é desenvolver um sistema de rastreio de entregas automatizado via WhatsApp para a Appmax. A solução visa resolver os problemas atuais causados pela falta de automação, que gera retrabalho, aumenta os custos com suporte e cria atritos na jornada do cliente.
 
-A "NOVA SOLUÇÃO" consiste em um sistema proativo de **Rastreamento de pedidos via WhatsApp para e-commerces**.
+A solução proposta automatizará o envio de atualizações de status de pedidos de forma proativa, incluindo:
+* Confirmação de compra
+* Código de rastreio
+* Aviso de "pedido em trânsito" ou "entregue"
 
-O objetivo é automatizar a comunicação com o cliente final, enviando atualizações de status da entrega diretamente para o seu WhatsApp.
+## 2. Solução Técnica
 
-### Fluxo de Mensagens
+A primeira parte da solução é desenvolver um layout web para a divulgação na plataforma da AppMax, a segunda será um bot que enviará mensagens automáticas em momentos-chave da jornada de entrega, utilizando dados de rastreio obtidos via API para garantir atualizações precisas e em tempo real.
 
-O sistema notificará o cliente final em três momentos principais:
+## 3. Requisitos
 
-1.  **Confirmação de Compra:** Assim que a compra for confirmada, o cliente receberá no WhatsApp os detalhes da entrega.
-2.  **Envio do Código de Rastreio:** Quando o rastreio for liberado, o cliente será avisado no WhatsApp e saberá onde acompanhar seu pedido.
-3.  **Atualização de Status:** O cliente receberá atualizações sobre o andamento, como, por exemplo, quando o pedido saiu para entrega e quando já foi entregue.
+* **Sistema de Mensagens via WhatsApp:** A aplicação é capaz de enviar mensagens automatizadas.
+* **Integração:** A solução se integra ao sistema de rastreio de pedidos para obter atualizações de status.
+* **Fluxo de Mensagens:** O sistema envia três tipos de mensagens: confirmação de compra, código de rastreio e atualizações de status ("Saiu para entrega" e "Entregue").
 
-## Stakeholders
+## 4. Stack de Tecnologia (Trilha Java)
 
-* **Líder do Projeto:** Carolina Raquel Wiedenhefdt, Supervisora Suporte B2C.
+* **Back-End:** Java com o framework Spring Boot.
+* **Integração WhatsApp:** API oficial do WhatsApp Business ou um provedor de terceiros (Ex: Twilio, Zenvia).
+* **Front-End:** React para a aplicação web.
+* **Arquitetura:** A arquitetura é robusta e escalável, capaz de lidar com um grande volume de mensagens e integrações em tempo real.
+
+## 4. Stack de Tecnologia (Trilha IA e Dados)
+* **Arquitetura de Dados:** Projeto de um banco de dados para armazenar informações de rastreio e interações do chatbot.
+* **Análise de Dados:** Desenvolvimento de relatórios para analisar o impacto da solução (ex: redução de chamados).
+* **Automação Inteligente:** Utilização de IA preditiva para antecipar problemas de entrega ou prever a necessidade de suporte.
+
+## **Pré-requisitos:**
+* Java JDK (21)
+* Maven
+* Postgress
+* Chaves de API (WhatsApp e Rastreio)
