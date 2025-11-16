@@ -1,8 +1,7 @@
 package br.com.appmax.rastreio.controller;
 
-import br.com.appmax.rastreio.model.Pedido;
+import br.com.appmax.rastreio.model.PedidoModel;
 import br.com.appmax.rastreio.service.PedidoService;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,13 +17,13 @@ public class PedidoController {
     }
 
     @PostMapping
-    public ResponseEntity<Pedido> save(@RequestBody Pedido pedido) {
-        Pedido novo = pedidoService.registrarPedido(pedido);
+    public ResponseEntity<PedidoModel> save(@RequestBody PedidoModel pedido) {
+        PedidoModel novo = pedidoService.registrarPedido(pedido);
         return ResponseEntity.ok(novo);
     }
 
     @GetMapping
-    public ResponseEntity<List<Pedido>> listarPedidos() {
+    public ResponseEntity<List<PedidoModel>> listarPedidos() {
         return ResponseEntity.ok(pedidoService.listarPedidos());
     }
 }
